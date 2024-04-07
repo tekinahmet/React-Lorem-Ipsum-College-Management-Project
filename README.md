@@ -1,3 +1,7 @@
+Install these libraries
+
+npm i @reduxjs/toolkit @sweetalert2/themes axios bootstrap encrypt-storage formik moment primereact react-bootstrap react-icons react-input-mask-next react-router-dom sass sweetalert2 swiper yup react-redux
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
