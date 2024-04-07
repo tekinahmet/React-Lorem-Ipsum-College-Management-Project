@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "title": "Introduction to Web Development",
+        "description": "Learn the basics of web development, including HTML, CSS, and JavaScript.",
+        "date": "2024-05-01",
+        "time": "10:00 AM",
+        "location": "Online",
+        "image": "event-01.jpg"
+    },
+
+    {
+        "id": 2,
+        "title": "Advanced Web Development",
+        "description": "Master advanced web development techniques and build real-world applications.",
+        "date": "2024-07-01",
+        "time": "11:00 AM",
+        "location": "Computer Lab A",
+        "image": "event-01.jpg"
+    },
+
+    {
+        "id": 3,
+        "title": "Introduction to Mobile Development",
+        "description": "Learn the basics of mobile development, including Android and iOS development.",
+        "date": "2024-01-19",
+        "time": "12:00 PM",
+        "location": "Lecture Hall B",
+        "image": "event-01.jpg"
+    },
+
+    {
+        "id": 4,
+        "title": "Advanced Mobile Development",
+        "description": "Master advanced mobile development techniques and build real-world applications.",
+        "date": "2024-11-01",
+        "time": "01:00 PM",
+        "location": "Room 101",
+        "image": "event-01.jpg"
+    },
+
+    {
+        "id": 5,
+        "title": "Introduction to Artificial Intelligence",
+        "description": "Learn the basics of artificial intelligence, including machine learning and deep learning.",
+        "date": "2024-04-08",
+        "time": "02:00 PM",
+        "location": "Online",
+        "image": "event-01.jpg"
+    },
+
+    {
+        "id": 6,
+        "title": "Advanced Artificial Intelligence",
+        "description": "Master advanced artificial intelligence techniques and build real-world applications.",
+        "date": "2024-05-01",
+        "time": "03:00 PM",
+        "location": "Room 102",
+        "image": "event-01.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Introduction to Artificial Intelligence",
+        "description": "Learn the basics of artificial intelligence, including machine learning and deep learning.",
+        "date": "2024-01-01",
+        "time": "04:00 PM",
+        "location": "Lecture Hall C",
+        "image": "event-01.jpg"
+    },
+
+    {
+        "id": 8,
+        "title": "Advanced Artificial Intelligence",
+        "description": "Master advanced artificial intelligence techniques and build real-world applications.",
+        "date": "2024-05-05",
+        "time": "05:00 PM",
+        "location": "Online",
+        "image": "event-01.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Introduction to Artificial Intelligence",
+        "description": "Learn the basics of artificial intelligence, including machine learning and deep learning.",
+        "date": "2024-06-11",
+        "time": "06:00 PM",
+        "location": "Room 103",
+        "image": "event-01.jpg"
+    },
+
+    {
+        "id": 10,
+        "title": "Advanced Artificial Intelligence",
+        "description": "Master advanced artificial intelligence techniques and build real-world applications.",
+        "date": "2024-02-29",
+        "time": "07:00 PM",
+        "location": "Online",
+        "image": "event-01.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Introduction to Artificial Intelligence",
+        "description": "Learn the basics of artificial intelligence, including machine learning and deep learning.",
+        "date": "2025-03-05",
+        "time": "08:00 PM",
+        "location": "Computer Lab C",
+        "image": "event-01.jpg"
+    },
+
+    {
+        "id": 12,
+        "title": "Advanced Artificial Intelligence",
+        "description": "Master advanced artificial intelligence techniques and build real-world applications.",
+        "date": "2024-11-01",
+        "time": "09:00 PM",
+        "location": "Online",
+        "image": "event-01.jpg"
+    },
+    {
+        "id": 13,
+        "title": "Introduction to Artificial Intelligence",
+        "description": "Learn the basics of artificial intelligence, including machine learning and deep learning.",
+        "date": "2024-12-31",
+        "time": "10:00 PM",
+        "location": "Online",
+        "image": "event-01.jpg"
+    },
+
+    {
+        "id": 14,
+        "title": "Advanced Artificial Intelligence",
+        "description": "Master advanced artificial intelligence techniques and build real-world applications.",
+        "date": "2024-08-21",
+        "time": "11:00 PM",
+        "location": "Online",
+        "image": "event-01.jpg"
+    },
+    {
+        "id": 15,
+        "title": "Introduction to Artificial Intelligence",
+        "description": "Learn the basics of artificial intelligence, including machine learning and deep learning.",
+        "date": "2024-01-31",
+        "time": "12:00 AM",
+        "location": "Online",
+        "image": "event-01.jpg"
+    }
+]

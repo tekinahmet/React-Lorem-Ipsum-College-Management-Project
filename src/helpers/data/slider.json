@@ -1,0 +1,15 @@
+[
+  {
+    "id": "1",
+    "image": "slider-01.jpg",
+    "title": "Ignite Your Imagination",
+    "desc": "Explore the world of science and technology with our latest innovations."
+  },
+
+  {
+    "id": "2",
+    "image": "slider-02.jpg",
+    "title": "Empower Your Creativity",
+    "desc": "Join our community of educators and artists for creative learning and inspiration."
+  }
+]

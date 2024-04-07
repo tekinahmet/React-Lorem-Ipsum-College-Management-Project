@@ -1,0 +1,15 @@
+@use "../../styles/variables.scss" as v;
+@use "../../styles/mixins" as m;
+
+.instructors {
+  .title {
+    background-color: v.$color1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    padding: 2rem;
+    @include m.border-radius(5px);
+  }
+}

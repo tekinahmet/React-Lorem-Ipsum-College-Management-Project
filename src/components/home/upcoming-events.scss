@@ -1,0 +1,12 @@
+
+.upcoming-events{
+    h2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .swiper-slide{
+        height: auto;
+    }
+}

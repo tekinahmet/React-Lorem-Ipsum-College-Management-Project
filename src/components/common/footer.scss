@@ -1,0 +1,8 @@
+@use "../../styles/variables" as v;
+ 
+footer{
+    background-color: v.$color2;
+    color: v.$color3;
+    padding-top: 125px;
+    padding-bottom: 125px;
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "firstName": "John",
+    "lastName": "Smith",
+    "title": "Senior IT Consultant",
+    "image": "instructor-01.jpg"
+  },
+  {
+    "id": 2,
+    "firstName": "Sarah",
+    "lastName": "Johnson",
+    "title": "Junior IT Specialist",
+    "image": "instructor-02.jpg"
+  },
+  {
+    "id": 3,
+    "firstName": "Michael",
+    "lastName": "Brown",
+    "title": "Software Engineer", 
+    "image": "instructor-03.jpg"
+  },
+  {
+    "id": 4,
+    "firstName": "Emily",
+    "lastName": "Davis",
+    "title": "IT Professor",
+    "image": "instructor-04.jpg"
+  },
+  {
+    "id": 5,
+    "firstName": "David",
+    "lastName": "Miller",
+    "title": "IT Specialist",
+    "image": "instructor-05.jpg"
+  },
+  {
+    "id": 6,
+    "firstName": "Jessica",
+    "lastName": "Wilson",
+    "title": "IT Manager",
+    "image": "instructor-06.jpg"
+  },
+  {
+    "id": 7,
+    "firstName": "Olivia",
+    "lastName": "Taylor",
+    "title": "IT Coordinator",
+    "image": "instructor-07.jpg"
+  },
+  {
+    "id": 8,
+    "firstName": "Andrew",
+    "lastName": "Thomas",
+    "title": "IT Associate",
+    "image": "instructor-08.jpg"
+  },
+  {
+    "id": 9,
+    "firstName": "Sophia",
+    "lastName": "Jackson",
+    "title": "IT Specialist",
+    "image": "instructor-09.jpg"
+  },
+  {
+    "id": 10,
+    "firstName": "Daniel",
+    "lastName": "White",
+    "title": "IT Coordinator",
+    "image": "instructor-10.jpg"
+  }
+]

@@ -1,0 +1,124 @@
+[
+    {
+        "id": 1,
+        "title": "Introduction to Web Development",
+        "desc": "Learn the basics of web development, including HTML, CSS, and JavaScript.",
+        "image": "course-01.jpg",
+        "price": 199,
+        "type": "online",
+        "rating": 4.5,
+        "date": "2022-01-01",
+        "user": 34,
+        "comment": 52,
+        "featured": true
+    },
+
+    {
+        "id": 2,
+        "title": "Advanced Web Development",
+        "desc": "Master advanced web development techniques and build real-world applications.",
+        "image": "course-02.jpg",
+        "price": 299,
+        "type": "in-person",
+        "rating": 4.0,
+        "date": "2022-01-01",
+        "user": 23,
+        "comment": 39,
+        "featured": false
+    },
+
+    {
+        "id": 3,
+        "title": "Introduction to Mobile Development",
+        "desc": "Learn the basics of mobile development, including Android and iOS development.",
+        "image": "course-03.jpg",
+        "price": 299,
+        "type": "Campus Lecture Hall",
+        "rating": 4.5,
+        "date": "2022-01-01",
+        "user": 12,
+        "comment": 66,
+        "featured": true
+    },
+
+    {
+        "id": 4,
+        "title": "Advanced Mobile Development",
+        "desc": "Master advanced mobile development techniques and build real-world applications.",
+        "image": "course-04.jpg",
+        "price": 399,
+        "type": "in-person",
+        "rating": 4.0,
+        "date": "2022-01-01",
+        "user": 23,
+        "comment": 9,
+        "featured": true
+    },
+
+    {
+        "id": 5,
+        "title": "Introduction to Artificial Intelligence",
+        "desc": "Learn the basics of artificial intelligence, including machine learning and deep learning.",
+        "image": "course-05.jpg",
+        "price": 499,
+        "type": "Campus Classroom",
+        "rating": 4.5,
+        "date": "2022-01-01",
+        "user": 34,
+        "comment": 55,
+        "featured": true
+    },
+
+    {
+        "id": 6,
+        "title": "Advanced Artificial Intelligence",
+        "desc": "Master advanced artificial intelligence techniques and build real-world applications.",
+        "image": "course-06.jpg",
+        "price": 599,
+        "type": "in-person",
+        "rating": 4.0,
+        "date": "2022-01-01",
+        "user": 23,
+        "comment": 49,
+        "featured": true
+    },
+    {
+        "id": 7,
+        "title": "Introduction to Game Development",
+        "desc": "Learn the basics of game development, including Unity and Unreal development.",
+        "image": "course-07.jpg",
+        "price": 699,
+        "type": "Online",
+        "rating": 4.5,
+        "date": "2022-01-01",
+        "user": 34,
+        "comment": 32,
+        "featured": true
+    },
+    {
+        "id": 8,
+        "title": "Advanced Game Development",
+        "desc": "Master advanced game development techniques and build real-world applications.",
+        "image": "course-08.jpg",
+        "price": 799,
+        "type": "Campus Lecture Hall",
+        "rating": 4.0,
+        "date": "2022-01-01",
+        "user": 23,
+        "comment": 19,
+        "featured": true
+    },
+    {
+        "id": 9,
+        "title": "Introduction to Data Science",
+        "desc": "Learn the basics of data science, including machine learning and deep learning.",
+        "image": "course-09.jpg",
+        "price": 899,
+        "type": "Campus Classroom",
+        "rating": 4.5,
+        "date": "2022-01-01",
+        "user": 34,
+        "comment": 20,
+        "featured": true
+    }
+]
