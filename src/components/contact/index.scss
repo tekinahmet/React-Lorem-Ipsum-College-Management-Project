@@ -1,0 +1,31 @@
+@use "../../styles/_variables.scss" as v;
+@use "../../styles/mixins.scss" as m;
+
+.contact {
+  h2 {
+    color: v.$color1;
+    font-size: 1.5rem;
+    text-shadow: 0 0 3px v.$color1;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    z-index: 1;
+    .card-body {
+      padding: 50px;
+      box-shadow: 3px 5px 10px -5px v.$color2;
+    }
+    a{
+        color: v.$color2-opacity-70;
+    }
+
+    .nav-link {
+      margin-bottom: 20px
+    }
+  }
+
+  iframe {
+    @include m.transform(translateY(-50px));
+    margin-bottom: -50px; //morgin-bottom, iframe i translateY ile yukari kaydirdigimiz kadar footeri yukari kaydirir
+  }
+}

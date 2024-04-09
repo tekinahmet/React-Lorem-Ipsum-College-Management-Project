@@ -7,6 +7,7 @@ import { useFormik } from "formik";
 import ButtonSpinner from "../common/button-spinner";
 import { createMessage } from "../../api/contact-service";
 import { swalAlert } from "../../helpers/swal";
+import "./contact-form.scss";
 
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
@@ -41,7 +42,9 @@ const ContactForm = () => {
       formik.resetForm(); //formu sıfırlar.
       swalAlert("Message sent successfully");
     } catch (err) {
-      console.log(err);
+      const errMsg = Object.values(err.response.data.validations)[0];
+      //hata mesajını array olarak alacaksak, mesaj object olduğu için Object.values kullanılır, mesaj backend den geliyor
+      swalAlert(errMsg);
     } finally {
       setLoading(false);
     }
@@ -55,7 +58,7 @@ const ContactForm = () => {
   //noValidate ile html5 validasyonu kaldırılmıştır
   //onSubmit ile form submit edildiğinde fonksiyon çağırılır
   return (
-    <Form noValidate onSubmit={formik.handleSubmit}>
+    <Form noValidate onSubmit={formik.handleSubmit} className="contact-form">
       <h2>Send Me Message</h2>
       <Row>
         <Col md={6}>

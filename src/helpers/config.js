@@ -10,7 +10,8 @@ export const config = {
     phone2: "+86 123 456 7891",
     email: "info@example.com",
     address: "341 School Avenue Berry, AL 35546",
-    mapUrl: "https://google.com",
+    mapEmbedURL:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.7136964853535!2d-87.60127969999999!3d33.664579599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88862940535ee321%3A0x9bddb072ad15caa1!2s341%20School%20Ave%2C%20Berry%2C%20AL%2035546%2C%20USA!5e0!3m2!1sen!2str!4v1712534683078!5m2!1sen!2str",
     socialMedia: {
       facebook: "https://www.facebook.com/",
       twitter: "https://twitter.com/",
