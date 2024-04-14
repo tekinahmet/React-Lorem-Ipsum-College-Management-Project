@@ -13,7 +13,7 @@ const FeaturedCourses = () => {
       <Container>
         <Row className="g-5" xs={1} sm={2} md={3} lg={4}>
           {featuredCourses.map((course) => (
-            <Col>
+            <Col key={course.id}>
               <CourseCard {...course} key={course.id} />
             </Col>
           ))}

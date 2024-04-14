@@ -5,11 +5,18 @@ import * as Yup from "yup";
 import PasswordInput from "../common/password-input";
 import { login } from "../../api/auth-service";
 import ButtonSpinner from "../common/button-spinner";
-// import { setLocalStorage } from "../../helpers/encrypted-storage";
-
+import { useDispatch } from "react-redux";
+//import { setLocalStorage } from "../../helpers/encrypted-storage";
+import { signIn } from "../../store/slices/auth-slice";
+import { useNavigate } from "react-router-dom";
+import { swalAlert } from "../../helpers/swal";
 
 const LoginForm = () => {
   const [loading, setLoading] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   const initialValues = {
     username: "roo",
@@ -32,11 +39,22 @@ const LoginForm = () => {
 
       //local storage e yerlestir
       localStorage.setItem("token", token);
+      //setLocalStorage.setItem("token", token);
 
       //merkezi state i güncelle
+      dispatch(signIn(user));
+      //dispatch reducer i calistirir
+      //dispatch i calistirmak icin useDispatch hook kullaniyoruz
 
-      //navigate
+      //navigate, useNavigate()
+      navigate("/dashboard");
+      //state i gormek icin redux a bakilabilir
+
     } catch (err) {
+      console.log(err);
+      const errMessage = err.response.data.message
+      swalAlert(errMessage, "error");
+
     } finally {
       setLoading(false);
     }

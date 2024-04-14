@@ -48,7 +48,7 @@ const UpcomingEvents = () => {
           }}
         >
           {upcomingEvents.map((event) => (
-            <SwiperSlide>
+            <SwiperSlide key={event.id}>
               <EventCard {...event} />
             </SwiperSlide>
           ))}

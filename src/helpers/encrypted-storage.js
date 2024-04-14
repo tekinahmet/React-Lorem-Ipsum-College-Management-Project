@@ -1,9 +1,8 @@
-import { EncryptStorage } from "encrypt-storage";
+/* import { EncryptStorage } from "encrypt-storage";
+import.meta.env.VITE_SOME_KEY;
 
-
-
-const key = process.env.REACT_APP_ENCRYPT_KEY
-console.log(key)
+const key = process.env.REACT_APP_ENCRYPT_KEY;
+console.log(key);
 const encryptStorage = new EncryptStorage(key);
 
 export const setLocalStorage = (key, value) => {
@@ -15,3 +14,4 @@ export const getLocalStorage = (key) => {
 export const removeLocalStorage = (key) => {
   encryptStorage.removeItem(key);
 };
+ */

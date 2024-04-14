@@ -1,13 +1,13 @@
 import React from "react";
 import { Carousel, Image } from "react-bootstrap";
 import slides from "../../helpers/data/slider.json";
-import "../home/slider.scss"
+import "../home/slider.scss";
 const Slider = () => {
   return (
     <div>
       <Carousel fade className="slider">
         {slides.map((slides) => (
-          <Carousel.Item>
+          <Carousel.Item key={slides.id}>
             <Image
               src={`/images/slider/${slides.image}`}
               alt={`/images/slider/${slides.title}`}
