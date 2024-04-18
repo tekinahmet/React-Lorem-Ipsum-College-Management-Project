@@ -24,7 +24,7 @@ const UserMenuAuth = () => {
   return (
     <>
       <Button variant="secondary" onClick={() => setShow((prev) => !prev)}>
-        <FaUser /> {user.name}
+        <FaUser /> {user.name} {user?.surname}
       </Button>
 
       <Offcanvas

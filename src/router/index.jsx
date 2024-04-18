@@ -27,31 +27,31 @@ const router = createBrowserRouter([
         element: <CoursesPage />,
       },
       {
-        path: "/events",
+        path: "events",
         element: <EventsPage />,
       },
       {
-        path: "/about",
+        path: "about",
         element: <AboutPage />,
       },
       {
-        path: "/contact",
+        path: "contact",
         element: <ContactPage />,
       },
       {
-        path: "/login",
+        path: "login",
         element: <LoginPage />,
       },
       {
-        path: "/dashboard",
+        path: "dashboard",
         children: [
           {
             index: true,
             element: (
               <PrivateRoute roles={config.pageRoles.dashboard}>
                 <DashboardPage />
-                //sarmallanarak privaterouter in children i oldu, privaterouter
-                a children yazacagiz
+               {/*  sarmallanarak privaterouter in children i oldu, privaterouter
+                a children yazacagiz */}
               </PrivateRoute>
             ),
           },
@@ -66,11 +66,11 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "/unauthorized",
+        path: "unauthorized",
         element: <Error403Page />,
       },
       {
-        path: "/*",
+        path: "*",
         element: <Error404Page />,
       },//error sayfası her zaman en sonda yer alir, ve path olarak * verilir
     ],
