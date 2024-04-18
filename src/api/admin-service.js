@@ -10,19 +10,28 @@ export const getAdminsByPage = async (
   sort = "name",
   type = "asc"
 ) => {
-  const response = await axios.get(
+  const res = await axios.get(
     `${API_URL}/admin/getAll?page=${page}&size=${size}&sort=${sort}&type=${type}`,
     {
       headers: getAuthHeader(),
     }
   );
-  const data = response.data;
+  const data = res.data;
   return data;
 };
 export const deleteAdmin = async (id) => {
-  const response = await axios.delete(`${API_URL}/admin/delete/${id}`, {
+  const res = await axios.delete(`${API_URL}/admin/delete/${id}`, {
     headers: getAuthHeader(),
   }); //headers gerekli, yetki kontrolu yapacak
-  const data = response.data;
+  const data = res.data;
+  return data;
+};
+
+
+export const createAdmin = async (payload) => {
+  const res = await axios.post(`${API_URL}/admin/save`, payload,{
+    headers: getAuthHeader(),
+  }); //headers gerekli, yetki kontrolu yapacak
+  const data = res.data;
   return data;
 };

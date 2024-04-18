@@ -6,8 +6,11 @@ import { deleteAdmin, getAdminsByPage } from "../../../api/admin-service";
 import Spacer from "../../common/spacer";
 import { FaTrash } from "react-icons/fa";
 import { swalConfirm, swalAlert } from "../../../helpers/swal";
+import { useDispatch, useSelector } from "react-redux";
+import { refreshToken, setOps } from "../../../store/slices/misc-slice";
 
 const AdminList = () => {
+  const { listRefreshToken } = useSelector((state) => state.misc);
   const [list, setList] = useState([]);
   const [totalRecords, setTotalRecords] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -16,6 +19,7 @@ const AdminList = () => {
     rows: 25,
     page: 0,
   });
+  const dispatch = useDispatch();
 
   const loadData = async () => {
     try {
@@ -40,6 +44,7 @@ const AdminList = () => {
 
     try {
       await deleteAdmin(id);
+      dispatch(refreshToken())
       swalAlert("Admin deleted successfully", "success");
     } catch (err) {
       console.log(err);
@@ -53,7 +58,7 @@ const AdminList = () => {
 
   useEffect(() => {
     loadData();
-  }, [lazyState]);
+  }, [lazyState, listRefreshToken]);
 
   /* const getFullName = (row)=>{
     return `${row.name} ${row.surname}`
@@ -82,7 +87,7 @@ const AdminList = () => {
           <Card.Body>
             <Card.Title className="d-flex justify-content-between align-items-center">
               <span>Admin List</span>
-              <Button>New Admin</Button>
+              <Button onClick={() => {dispatch(setOps("new"))}}>New Admin</Button>
             </Card.Title>
             <DataTable
               value={list}
