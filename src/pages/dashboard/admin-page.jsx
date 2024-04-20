@@ -12,16 +12,14 @@ const AdminPage = () => {
     <>
       <PageHeader title="Admin Management" />
       <Spacer />
-
       {currentOps === "new" && (
         <>
           <NewAdminForm />
           <Spacer />
         </>
       )}
-
+      <AdminList /> 
       <Spacer />
-      <AdminList />
     </>
   );
 };

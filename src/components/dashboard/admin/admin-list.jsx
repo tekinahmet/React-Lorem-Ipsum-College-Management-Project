@@ -26,9 +26,10 @@ const AdminList = () => {
       const response = await getAdminsByPage(lazyState.page, lazyState.rows);
       console.log(response);
       setList(response.content);
-
       setTotalRecords(response.totalElements);
     } catch (err) {
+      const errMsg = err.response.data.message;
+      swalAlert(errMsg, "error");
       console.log(err);
     } finally {
       setLoading(false);
@@ -44,7 +45,7 @@ const AdminList = () => {
 
     try {
       await deleteAdmin(id);
-      dispatch(refreshToken())
+      dispatch(refreshToken());
       swalAlert("Admin deleted successfully", "success");
     } catch (err) {
       console.log(err);
@@ -52,6 +53,7 @@ const AdminList = () => {
       setLoading(false);
     }
   };
+  
   const onPage = (event) => {
     setlazyState(event);
   };
@@ -60,9 +62,6 @@ const AdminList = () => {
     loadData();
   }, [lazyState, listRefreshToken]);
 
-  /* const getFullName = (row)=>{
-    return `${row.name} ${row.surname}`
-} */
   const getOps = (row) => {
     console.log(row);
     return (
@@ -81,43 +80,47 @@ const AdminList = () => {
   //disabled={row.built_in} backend tarafinda true olanlar disabled edilecek
 
   return (
-    <>
-      <Container>
-        <Card>
-          <Card.Body>
-            <Card.Title className="d-flex justify-content-between align-items-center">
-              <span>Admin List</span>
-              <Button onClick={() => {dispatch(setOps("new"))}}>New Admin</Button>
-            </Card.Title>
-            <DataTable
-              value={list}
-              lazy
-              dataKey="id"
-              paginator
-              first={lazyState.first}
-              rows={lazyState.rows}
-              totalRecords={totalRecords}
-              onPage={onPage}
-              loading={loading}
-              tableStyle={{ minWidth: "50rem" }}
+    <Container>
+      <Card>
+        <Card.Body>
+          <Card.Title className="d-flex justify-content-between align-items-center">
+            <span>Admin List</span>
+            <Button
+              onClick={() => {
+                dispatch(setOps("new"));
+              }}
             >
-              <Column
-                body={(row) => {
-                  return `${row.name} ${row.surname}`;
-                }}
-                header="Name"
-              />
-              <Column field="gender" header="Gender" />
-              <Column field="phoneNumber" header="Phone Number" />
-              <Column field="ssn" header="SSN" />
-              <Column field="username" header="Username" />
-              <Column body={getOps} header="Name" />
-            </DataTable>
-          </Card.Body>
-        </Card>
-      </Container>
+              New
+            </Button>
+          </Card.Title>
+          <DataTable
+            value={list}
+            lazy
+            dataKey="id"
+            paginator
+            first={lazyState.first}
+            rows={lazyState.rows}
+            totalRecords={totalRecords}
+            onPage={onPage}
+            loading={loading}
+            tableStyle={{ minWidth: "50rem" }}
+          >
+            <Column
+              body={(row) => {
+                return `${row.name} ${row.surname}`;
+              }}
+              header="Name"
+            />
+            <Column field="gender" header="Gender" />
+            <Column field="phoneNumber" header="Phone Number" />
+            <Column field="ssn" header="SSN" />
+            <Column field="username" header="Username" />
+            <Column body={getOps} header="Name" />
+          </DataTable>
+        </Card.Body>
+      </Card>
       <Spacer height={75} />
-    </>
+    </Container>
   );
 };
 
