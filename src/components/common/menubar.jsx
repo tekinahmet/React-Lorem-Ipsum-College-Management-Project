@@ -11,7 +11,7 @@ const MenuBar = () => {
       <Container>
         <Navbar.Brand as={Link} to="/">
           <Image
-            src="logo.jpg"
+            src="../../../public/logo.jpg"
             style={{ width: 100, borderRadius: "50%" }}
             alt={config.project.name}
           />
@@ -25,7 +25,7 @@ const MenuBar = () => {
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvas">
               <Image
-                src="logo.jpg"
+                src="../../../public/logo.jpg"
                 style={{ width: 100, borderRadius: "50%" }}
                 alt={config.project.name}
               />

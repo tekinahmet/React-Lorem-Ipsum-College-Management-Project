@@ -15,6 +15,7 @@ import Error403Page from "../pages/errors/error403-page";
 import ManagerPage from "../pages/dashboard/manager-page";
 import AssistantManagerPage from "../pages/dashboard/assistant-manager-page.jsx";
 import LessonPage from "../pages/dashboard/lesson-page.jsx";
+import TeacherPage from "../pages/dashboard/teacher-page.jsx";
 
 const router = createBrowserRouter([
   {
@@ -87,6 +88,14 @@ const router = createBrowserRouter([
             element: (
               <PrivateRoute roles={config.pageRoles.lessonManagement}>
                 <LessonPage />
+              </PrivateRoute>
+            ),
+          },
+          {
+            path: "teacher-management",
+            element: (
+              <PrivateRoute roles={config.pageRoles.teacherManagement}>
+                <TeacherPage />
               </PrivateRoute>
             ),
           },
