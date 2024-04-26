@@ -16,6 +16,9 @@ import ManagerPage from "../pages/dashboard/manager-page";
 import AssistantManagerPage from "../pages/dashboard/assistant-manager-page.jsx";
 import LessonPage from "../pages/dashboard/lesson-page.jsx";
 import TeacherPage from "../pages/dashboard/teacher-page.jsx";
+import StudentPage from "../pages/dashboard/student-page.jsx";
+import ContactMessagePage from "../pages/dashboard/contact-message-page.jsx";
+import StudentInfoPage from "../pages/dashboard/student-info-page.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +30,7 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/courses",
+        path: "courses",
         element: <CoursesPage />,
       },
       {
@@ -54,7 +57,7 @@ const router = createBrowserRouter([
             element: (
               <PrivateRoute roles={config.pageRoles.dashboard}>
                 <DashboardPage />
-               {/*  sarmallanarak privaterouter in children i oldu, privaterouter
+                {/*  sarmallanarak privaterouter in children i oldu, privaterouter
                 a children yazacagiz */}
               </PrivateRoute>
             ),
@@ -99,6 +102,30 @@ const router = createBrowserRouter([
               </PrivateRoute>
             ),
           },
+          {
+            path: "student-management",
+            element: (
+              <PrivateRoute roles={config.pageRoles.studentManagement}>
+                <StudentPage />
+              </PrivateRoute>
+            ),
+          },
+          {
+            path: "contact-messages",
+            element: (
+              <PrivateRoute roles={config.pageRoles.contactMessages}>
+                <ContactMessagePage />
+              </PrivateRoute>
+            ),
+          },
+          {
+            path: "student-info-management",
+            element: (
+              <PrivateRoute roles={config.pageRoles.studentInfoManagement}>
+                <StudentInfoPage />
+              </PrivateRoute>
+            ),
+          },
         ],
       },
       {
@@ -108,7 +135,7 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: <Error404Page />,
-      },//error sayfası her zaman en sonda yer alir, ve path olarak * verilir
+      }, //error sayfası her zaman en sonda yer alir, ve path olarak * verilir
     ],
   },
 ]);

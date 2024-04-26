@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Nav, Offcanvas } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { FaUser } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { swalConfirm } from "../../helpers/swal";
 import { signOut } from "../../store/slices/auth-slice";
 // import { removeLocalStorage } from "../../helpers/encrypted-storage";

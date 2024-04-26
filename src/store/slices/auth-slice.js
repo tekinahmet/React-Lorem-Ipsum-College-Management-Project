@@ -1,20 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getUserMenu } from "../../helpers/data/user-menu";
-
+import { getUserMenu } from "../../helpers/user-menu";
 
 //merkezi state gecici hafizada-ram depolanir, ulasilmasi zordur
 
 //merkezi state hazirlanisi
 const initialState = {
   user: null,
-  isUserLogin: false,
+  isUserLogin: true,
   userMenu: [],
 };
 
 const authSlice = createSlice({
   name: "auth",
   initialState,
-  reducers: { //merkezi state deki degerlerin guncellenmesi
+  reducers: {
+    //merkezi state deki degerlerin guncellenmesi
     signIn: (state, action) => {
       state.user = action.payload; //login-form daki user buraya geliyor, action.payload içine
       state.isUserLogin = true;
