@@ -1,7 +1,7 @@
 /* 
 import { EncryptStorage } from 'encrypt-storage';
 
-const key = import.meta.env.REACT_APP_KEY;
+const key = import.meta.env.VITE_APP_KEY;
 
 console.log(key);
 if(!key) throw new Error('key not found');

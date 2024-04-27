@@ -19,6 +19,9 @@ import TeacherPage from "../pages/dashboard/teacher-page.jsx";
 import StudentPage from "../pages/dashboard/student-page.jsx";
 import ContactMessagePage from "../pages/dashboard/contact-message-page.jsx";
 import StudentInfoPage from "../pages/dashboard/student-info-page.jsx";
+import MeetPage from "../pages/dashboard/meet-page.jsx";
+import ChooseLessonPage from "../pages/dashboard/choose-lesson.jsx";
+import GradesMeetsPage from "../pages/dashboard/grades-meets-page.jsx";
 
 const router = createBrowserRouter([
   {
@@ -123,6 +126,30 @@ const router = createBrowserRouter([
             element: (
               <PrivateRoute roles={config.pageRoles.studentInfoManagement}>
                 <StudentInfoPage />
+              </PrivateRoute>
+            ),
+          },
+          {
+            path: "meet-management",
+            element: (
+              <PrivateRoute roles={config.pageRoles.meetManagement}>
+                <MeetPage />
+              </PrivateRoute>
+            ),
+          },
+          {
+            path: "choose-lesson",
+            element: (
+              <PrivateRoute roles={config.pageRoles.chooseLesson}>
+                <ChooseLessonPage />
+              </PrivateRoute>
+            ),
+          },
+          {
+            path: "grades-meets",
+            element: (
+              <PrivateRoute roles={config.pageRoles.gradesAndMeets}>
+                <GradesMeetsPage />
               </PrivateRoute>
             ),
           },
