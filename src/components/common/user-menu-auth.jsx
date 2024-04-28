@@ -5,6 +5,7 @@ import { FaUser } from "react-icons/fa";
 import {  useNavigate } from "react-router-dom";
 import { swalConfirm } from "../../helpers/swal";
 import { signOut } from "../../store/slices/auth-slice";
+import { setCurrentRecord, setOps } from "../../store/slices/misc-slice";
 // import { removeLocalStorage } from "../../helpers/encrypted-storage";
 
 const UserMenuAuth = () => {
@@ -22,6 +23,8 @@ const UserMenuAuth = () => {
   };
 const handleNavigate = (link) => { 
   setShow(false)
+  dispatch(setOps(null))
+  dispatch(setCurrentRecord(null))
   navigate(link)
  }
 

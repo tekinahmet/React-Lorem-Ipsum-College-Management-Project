@@ -20,7 +20,7 @@ import StudentPage from "../pages/dashboard/student-page.jsx";
 import ContactMessagePage from "../pages/dashboard/contact-message-page.jsx";
 import StudentInfoPage from "../pages/dashboard/student-info-page.jsx";
 import MeetPage from "../pages/dashboard/meet-page.jsx";
-import ChooseLessonPage from "../pages/dashboard/choose-lesson.jsx";
+import ChooseLessonPage from "../pages/dashboard/choose-lesson-page.jsx";
 import GradesMeetsPage from "../pages/dashboard/grades-meets-page.jsx";
 
 const router = createBrowserRouter([
