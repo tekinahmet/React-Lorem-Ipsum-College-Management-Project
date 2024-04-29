@@ -1,5 +1,5 @@
 import React from "react";
-import {Navbar } from "react-bootstrap";
+import {Image, Navbar } from "react-bootstrap";
 import { Container, Offcanvas } from "react-bootstrap";
 import { config } from "../../helpers/config";
 import { Link } from "react-router-dom";
@@ -10,7 +10,7 @@ const MenuBar = () => {
     <Navbar expand="lg" sticky="top" className="bg-white">
       <Container>
         <Navbar.Brand as={Link} to="/">
-          <img
+          <Image
             src="../../../public/images/logo/logo.jpg"
             style={{ width: 85, borderRadius: "50%" }}
             alt={config.project.name}
@@ -24,7 +24,7 @@ const MenuBar = () => {
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvas">
-              <img
+              <Image
                 src="../../../public/images/logo/logo.jpg"
                 style={{ width: 85, borderRadius: "50%" }}
                 alt={config.project.name}
