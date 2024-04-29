@@ -7,14 +7,14 @@ const PageHeader = ({ title }) => {
     <div className="page-header">
       <h1>
         <Image
-          src="../../../public/logo/logo.jpg"
+          src="../../../public/images/logo/logo.jpg"
           width={50}
           className="rounded-circle me-2"
           alt="Lorem Ipsum College"
         />
         {title}
         <Image
-          src="../../../public/logo/logo.jpg"
+          src="../../../public/images/logo/logo.jpg"
           width={50}
           className="rounded-circle ms-2"
           alt="Lorem Ipsum College"
