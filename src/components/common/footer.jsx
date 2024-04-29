@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Image } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -18,7 +18,7 @@ const Footer = () => {
           <Col lg={4}>
             <div style={{ textAlign: "center" }}>
               <Link to="/">
-                <Image
+                <img
                   src="../../../public/images/logo/logo.jpg"
                   style={{ width: 85, borderRadius: "50%", marginBottom: 30 }}
                   alt={config.project.name}
