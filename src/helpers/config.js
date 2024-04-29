@@ -23,9 +23,11 @@ export const config = {
       github: "https://github.com/",
     },
   },
+  
   api: {
     baseUrl: "https://mycampusmates.com/app",
   },
+
   pageRoles: {
     dashboard: ["ADMIN", "MANAGER", "ASSISTANTMANAGER", "TEACHER", "STUDENT"],
     adminManagement: ["ADMIN"],
@@ -40,6 +42,7 @@ export const config = {
     chooseLesson: ["STUDENT"],
     gradesAndMeets: ["STUDENT"],
   },
+
   educationTerms: [
     { label: "Fall", key: "FALL_SEMESTER" },
     { label: "Spring", key: "SPRING_SEMESTER" },

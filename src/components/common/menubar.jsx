@@ -12,7 +12,7 @@ const MenuBar = () => {
         <Navbar.Brand as={Link} to="/">
           <Image
             src="../../../public/logo.jpg"
-            style={{ width: 100, borderRadius: "50%" }}
+            style={{ width: 85, borderRadius: "50%" }}
             alt={config.project.name}
           />
         </Navbar.Brand>
@@ -26,7 +26,7 @@ const MenuBar = () => {
             <Offcanvas.Title id="offcanvas">
               <Image
                 src="../../../public/logo.jpg"
-                style={{ width: 100, borderRadius: "50%" }}
+                style={{ width: 85, borderRadius: "50%" }}
                 alt={config.project.name}
               />
             </Offcanvas.Title>

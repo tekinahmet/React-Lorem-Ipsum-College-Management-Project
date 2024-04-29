@@ -1,17 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getUserMenu } from "../../helpers/user-menu";
 
+
 //merkezi state gecici hafizada-ram depolanir, ulasilmasi zordur
 
 //merkezi state hazirlanisi
 const initialState = {
   user: null,
-  isUserLogin: true,
+  isUserLogin: false,
   userMenu: [],
 };
 
 const authSlice = createSlice({
-  name: "auth",
+  name: "auth", //action olustururken bu ad ile tanimlanir
   initialState,
   reducers: {
     //merkezi state deki degerlerin guncellenmesi

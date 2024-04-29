@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { Button, Nav, Offcanvas } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { FaUser } from "react-icons/fa";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { swalConfirm } from "../../helpers/swal";
 import { signOut } from "../../store/slices/auth-slice";
 import { setCurrentRecord, setOps } from "../../store/slices/misc-slice";
-// import { removeLocalStorage } from "../../helpers/encrypted-storage";
+import { removeLocalStorage } from "../../helpers/encrypted-storage";
 
 const UserMenuAuth = () => {
   const [show, setShow] = useState(false);
@@ -17,16 +17,16 @@ const UserMenuAuth = () => {
     const response = await swalConfirm("Are you sure you want to logout?");
     if (!response.isConfirmed) return;
     dispatch(signOut());
-    localStorage.removeItem("token");
-    // removeLocalStorage("token");
+    //localStorage.removeItem("token");
+    removeLocalStorage("token");
     navigate("/");
   };
-const handleNavigate = (link) => { 
-  setShow(false)
-  dispatch(setOps(null))
-  dispatch(setCurrentRecord(null))
-  navigate(link)
- }
+  const handleNavigate = (link) => {
+    setShow(false);
+    dispatch(setOps(null));
+    dispatch(setCurrentRecord(null));
+    navigate(link);
+  };
 
   return (
     <>
@@ -40,16 +40,23 @@ const handleNavigate = (link) => {
         onClick={() => setShow(false)}
         placement="start"
       >
-        <Offcanvas.Header closeButton className="bg-primary" style={{height: "46px"}}>
-          <Offcanvas.Title >MENU</Offcanvas.Title>
+        <Offcanvas.Header
+          closeButton
+          className="bg-primary"
+          style={{ height: "46px" }}
+        >
+          <Offcanvas.Title>MENU</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Nav className="flex-column">
-            <Nav.Link onClick={()=> handleNavigate("/dashboard")} >
+            <Nav.Link onClick={() => handleNavigate("/dashboard")}>
               Dashboard
             </Nav.Link>
             {userMenu.map((item) => (
-              <Nav.Link onClick={()=> handleNavigate(item.link)} key={item.title} >
+              <Nav.Link
+                onClick={() => handleNavigate(item.link)}
+                key={item.title}
+              >
                 {item.title}
               </Nav.Link>
             ))}

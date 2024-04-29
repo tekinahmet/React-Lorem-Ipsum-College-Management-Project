@@ -6,7 +6,7 @@ import PasswordInput from "../common/password-input";
 import { login } from "../../api/auth-service";
 import ButtonSpinner from "../common/button-spinner";
 import { useDispatch } from "react-redux";
-// import { setLocalStorage } from "../../helpers/encrypted-storage";
+import { setLocalStorage } from "../../helpers/encrypted-storage";
 import { signIn } from "../../store/slices/auth-slice";
 import { useNavigate } from "react-router-dom";
 import { swalAlert } from "../../helpers/swal";
@@ -38,8 +38,8 @@ const LoginForm = () => {
       const { token } = user;
 
       //local storage e yerlestir
-      localStorage.setItem("token", token);
-      // setLocalStorage.setItem("token", token);
+      //localStorage.setItem("token", token);
+      setLocalStorage("token", token);
 
       //merkezi state i güncelle
       dispatch(signIn(user));

@@ -14,28 +14,28 @@ const Footer = () => {
   return (
     <footer>
       <Container>
-        <Row className="g-5">
-          <Col lg={3}>
+        <Row className="g-5 ">
+          <Col lg={4}>
             <div style={{ textAlign: "center" }}>
               <Link to="/">
                 <Image
                   src="../../../public/logo.jpg"
-                  style={{ width: 100, borderRadius: "50%", marginBottom: 10 }}
+                  style={{ width: 85, borderRadius: "50%", marginBottom: 30 }}
                   alt={config.project.name}
                 />
               </Link>
             </div>
             <p style={{ textAlign: "justify" }}>{config.project.description}</p>
           </Col>
-          <Col sm={6} md={4} lg={3}>
+          <Col sm={6} md={3} lg={2}>
             <h3>Quick Links</h3>
             <MainMenu className="flex-column" />
           </Col>
-          <Col sm={6} md={4} lg={3}>
+          <Col sm={6} md={4} lg={2}>
             <h3>Social Links</h3>
             <SocialMenu className="flex-column" />
           </Col>
-          <Col md={4} lg={3}>
+          <Col md={5} lg={3}>
             <h3>Contact Us</h3>
             <ContactMenu />
           </Col>

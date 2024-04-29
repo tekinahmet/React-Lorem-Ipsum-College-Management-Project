@@ -8,7 +8,7 @@ const InstructorCard = ({ firstName, lastName, title, image }) => {
       <Card.Img
         src={`/images/instructors/${image}`}
         alt={firstName + " " + lastName}
-        style={{ height: 250, width: "100%" }}
+        style={{ height: 325, width: "100%" }}
       />
 
       <Card.Title>
