@@ -1,0 +1,16 @@
+
+@use "../../../styles/variables" as v;
+
+
+
+.dashboard-nav-btn{
+    background-color: white !important;
+    color: v.$color1 !important;
+    padding: 13px !important;
+   
+    &:hover{
+        background-color: v.$color1 !important;
+        color: white !important;
+    }
+}
+
