@@ -19,8 +19,8 @@ const LoginForm = () => {
   const navigate = useNavigate();
 
   const initialValues = {
-    username: "roo",
-    password: "123456Aa.",
+    username: "Admin9",
+    password: "Admin99.",
   };
 
   const validationSchema = Yup.object({
@@ -49,12 +49,10 @@ const LoginForm = () => {
       //navigate, useNavigate()
       navigate("/dashboard");
       //state i gormek icin redux a bakilabilir
-
     } catch (err) {
       console.log(err);
-      const errMessage = err.response.data.message
+      const errMessage = err.response.data.message;
       swalAlert(errMessage, "error");
-
     } finally {
       setLoading(false);
     }
