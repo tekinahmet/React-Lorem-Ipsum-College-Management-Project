@@ -23,7 +23,13 @@ const ContactForm = () => {
     name: Yup.string()
       .required("Required")
       .min(4, "Must be minimum 4 characters"),
-    email: Yup.string().email("Invalid email address").required("Required"),
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("Required")
+      .matches(
+        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+        "Invalid email format, abc@xyz.com"
+      ),
     subject: Yup.string()
       .required("Required")
       .min(4, "Must be minimum 4 characters")

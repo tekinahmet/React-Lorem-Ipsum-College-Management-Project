@@ -19,7 +19,6 @@ import { createStudent } from "../../../api/student-service";
 import { getAllAdvisorTeachers } from "../../../api/advisor-teacher-service";
 
 const NewStudentForm = () => {
-
   const [loading, setLoading] = useState(false);
   const [advisorTeachers, setAdvisorTeachers] = useState([]);
   const dispatch = useDispatch();
@@ -65,14 +64,19 @@ const NewStudentForm = () => {
     confirmPassword: Yup.string()
       .required("Required")
       .oneOf([Yup.ref("password")], "Password does not match"),
-    email: Yup.string().email("Invalid email").required("Required"),
+    email: Yup.string()
+      .email("Invalid email")
+      .required("Required")
+      .matches(
+        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+        "Invalid email format, abc@xyz.com"
+      ),
     advisorTeacherId: Yup.string().required("Required"),
     motherName: Yup.string().required("Required"),
     fatherName: Yup.string().required("Required"),
   });
 
   const onSubmit = async (values) => {
-    
     setLoading(true); //butonu disable etmek icin kullanilir
 
     try {

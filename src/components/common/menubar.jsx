@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import {Image, Navbar } from "react-bootstrap";
+import { Image, Navbar } from "react-bootstrap";
 import { Container, Offcanvas } from "react-bootstrap";
 import { config } from "../../helpers/config";
 import { Link } from "react-router-dom";
@@ -21,6 +22,7 @@ const MenuBar = () => {
           id="mainMenu"
           aria-labelledby="offcanvas"
           placement="end"
+         
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvas">

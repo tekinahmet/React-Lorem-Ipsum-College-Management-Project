@@ -69,7 +69,13 @@ const NewTeacherForm = () => {
     confirmPassword: Yup.string()
       .required("Required")
       .oneOf([Yup.ref("password")], "Password does not match"),
-    email: Yup.string().email("Invalid email").required("Required"),
+    email: Yup.string()
+      .email("Invalid email")
+      .required("Required")
+      .matches(
+        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+        "Invalid email format, abc@xyz.com"
+      ),
     lessonsIdList: Yup.array().min(1, "Please select at least one lesson"),
   });
 
