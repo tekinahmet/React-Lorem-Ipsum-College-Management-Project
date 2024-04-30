@@ -4,14 +4,14 @@ import { Container, Offcanvas } from "react-bootstrap";
 import { config } from "../../helpers/config";
 import { Link } from "react-router-dom";
 import MainMenu from "./main-menu";
-
+import logo from "../../../public/logo.jpg";
 const MenuBar = () => {
   return (
     <Navbar expand="lg" sticky="top" className="bg-white">
       <Container>
         <Navbar.Brand as={Link} to="/">
           <Image
-            src="/images/logo/logo.jpg"
+            src={logo}
             style={{ width: 85, borderRadius: "50%" }}
             alt={config.project.name}
           />
@@ -25,7 +25,7 @@ const MenuBar = () => {
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvas">
               <Image
-                src="/images/logo/logo.jpg"
+                src={logo}
                 style={{ width: 85, borderRadius: "50%" }}
                 alt={config.project.name}
               />

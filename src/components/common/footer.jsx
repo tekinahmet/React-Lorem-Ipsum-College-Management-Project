@@ -8,6 +8,7 @@ import MainMenu from "./main-menu";
 import "./footer.scss";
 import SocialMenu from "./social-menu";
 import ContactMenu from "./contact-menu";
+import logo from "../../../public/logo.jpg";
 
 
 const Footer = () => {
@@ -19,7 +20,7 @@ const Footer = () => {
             <div style={{ textAlign: "center" }}>
               <Link to="/">
                 <Image
-                  src="/images/logo/logo.jpg"
+                  src={logo}
                   style={{ width: 85, borderRadius: "50%", marginBottom: 30 }}
                   alt={config.project.name}
                 />
