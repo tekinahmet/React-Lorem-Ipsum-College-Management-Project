@@ -19,7 +19,7 @@ const Footer = () => {
             <div style={{ textAlign: "center" }}>
               <Link to="/">
                 <Image
-                  src="../../../public/images/logo/logo.jpg"
+                  src="/images/logo/logo.jpg"
                   style={{ width: 85, borderRadius: "50%", marginBottom: 30 }}
                   alt={config.project.name}
                 />
