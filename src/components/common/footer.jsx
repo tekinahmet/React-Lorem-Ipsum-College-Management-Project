@@ -8,8 +8,7 @@ import MainMenu from "./main-menu";
 import "./footer.scss";
 import SocialMenu from "./social-menu";
 import ContactMenu from "./contact-menu";
-import logo from "../../../public/logo.jpg";
-
+import logo from "../../../public/logo.png";
 
 const Footer = () => {
   return (

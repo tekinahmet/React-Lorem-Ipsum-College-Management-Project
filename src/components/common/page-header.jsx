@@ -1,7 +1,7 @@
 import React from "react";
 import "./page-header.scss";
 import { Image } from "react-bootstrap";
-import logo from "../../../public/logo.jpg";
+import logo from "../../../public/logo.png";
 
 const PageHeader = ({ title }) => {
   return (

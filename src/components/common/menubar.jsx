@@ -5,7 +5,7 @@ import { Container, Offcanvas } from "react-bootstrap";
 import { config } from "../../helpers/config";
 import { Link } from "react-router-dom";
 import MainMenu from "./main-menu";
-import logo from "../../../public/logo.jpg";
+import logo from "../../../public/logo.png";
 const MenuBar = () => {
   return (
     <Navbar expand="lg" sticky="top" className="bg-white">
@@ -22,7 +22,6 @@ const MenuBar = () => {
           id="mainMenu"
           aria-labelledby="offcanvas"
           placement="end"
-         
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvas">
